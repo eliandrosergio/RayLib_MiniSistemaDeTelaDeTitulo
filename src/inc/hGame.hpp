@@ -10,7 +10,7 @@
 struct	GameStruct {
 	MenuStruct	ms;
 	bool		isGameOver;
-	
+
 	// Dados do formulário
 	std::string nomeJogador;
 	std::string idadeJogador;

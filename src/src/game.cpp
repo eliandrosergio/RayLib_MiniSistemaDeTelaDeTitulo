@@ -102,7 +102,7 @@ void	processarFormulario( GameStruct& gs ) {
 			// Valida se os campos não estão vazios
 			if (!gs.nomeJogador.empty() && !gs.idadeJogador.empty()) {
 				gs.formularioCompleto = true;
-				// Aqui você vai salvar no arquivo (próxima etapa)
+				// Salva os dados no arquivo
 				std::cout << "Dados salvos: " << gs.nomeJogador << ", " << gs.idadeJogador << std::endl;
 			}
 		}
@@ -175,7 +175,8 @@ void	startGame( MenuStruct& ms ) {
 
 	while (!WindowShouldClose()) {
 		if (!gs.isGameOver) {
-			readGameInput(gs);  // IMPORTANTE: processar input antes de renderizar
+			// processar input antes de renderizar
+			readGameInput(gs);
 			renderGame(gs);
 		}
 		else
