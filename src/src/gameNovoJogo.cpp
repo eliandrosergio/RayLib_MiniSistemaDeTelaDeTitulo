@@ -118,9 +118,13 @@ void	processarFormulario( GameStruct& gs ) {
 		} else if (gs.campoAtivo == 1) {
 			// Valida se os campos não estão vazios
 			if (!gs.nomeJogador.empty() && !gs.idadeJogador.empty()) {
-				gs.formularioCompleto = true;
-				// Salva os dados no arquivo
-				std::cout << "Dados salvos: " << gs.nomeJogador << ", " << gs.idadeJogador << std::endl;
+				// AQUI: Chama a função para salvar no arquivo
+				if (salvarDados(gs.nomeJogador, gs.idadeJogador)) {
+					gs.formularioCompleto = true;
+					std::cout << "Dados salvos com sucesso!" << std::endl;
+				} else {
+					std::cerr << "Erro ao salvar os dados!" << std::endl;
+				}
 			}
 		}
 	}
