@@ -2,19 +2,23 @@
 #define HMAIN_HPP
 
 // libs c e cpp
-#include <raylib.h> // para usar o raylib e permitir quase tudo
-#include <vector> // para usar vetores
-#include <iostream> // para usar o std::cout, std::cerr e std::string
+#include <raylib.h>
+#include <vector>
+#include <iostream>
+#include <fstream>
+#include <sys/stat.h>
 
 // proto de structs em libs locais
-struct	MenuStruct; // struct principal do menu
-struct	GameStruct; // struct principal do jogo
+struct	MenuStruct;
+struct	GameStruct;
 
 // libs locais
 #include "hMenu.hpp"
 #include "hGame.hpp"
+#include "hGameNovoJogo.hpp"
+#include "hGameContinuarJogo.hpp"
 
 // defines
-#define FPS 60 // valor dos frames por segundo
+#define FPS 60
 
 #endif

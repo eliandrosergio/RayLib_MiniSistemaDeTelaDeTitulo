@@ -8,6 +8,8 @@ INC			=	-I$(INC_DIR)
 
 SRC			=	$(SRC_DIR)main.cpp \
 				$(SRC_DIR)game.cpp \
+				$(SRC_DIR)gameNovoJogo.cpp \
+				$(SRC_DIR)gameContinuarJogo.cpp \
 				$(SRC_DIR)menu.cpp
 
 OBJ			=	$(SRC:.cpp=.o)
